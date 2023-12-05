@@ -1,0 +1,246 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+.backGround_img{
+    width: 80px;
+    display: flex;
+    margin: auto;
+    margin-top: 13px;
+}
+.box{
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+    border: 0.5px solid #7d7c7c;
+    width: 280px;
+    height: 368px;
+    border-radius: 4px;
+    transition: height 0.01s ease;
+}
+.box_contents{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    margin-top: 1px;
+    margin-left: 24px;
+    font-style: normal;
+}
+h2{
+    margin-left: -3px;
+    margin-top: 6%;
+    font-weight: 400;
+    font-size: 22px;
+}
+.input_fields {
+    display: flex;
+    flex-direction: column;
+    margin-top: -11.7px;
+}
+
+.Input {
+    width: 230px;
+    font-weight: 500;
+    margin-left: -9px;
+    padding: 6px;
+    font-size: 10.6px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 10px;
+    margin-top: 3px;
+    width: 224px;
+    padding: 5px;
+    border: 1.3px solid rgb(136, 137, 139);
+    border-radius: 2px;
+}
+
+.password_forgot{
+    margin: auto;
+    display: flex;
+    font-size: 10px;
+    color: #000;
+    font-weight: 400;
+    font-family: sans-serif;
+    flex-direction: row;
+    margin-right: -3px;
+}
+.-password{
+    margin-bottom: -12px;
+}
+.btn{
+    width: 235px;
+    margin: auto;
+    margin-left: -2px;
+    padding: 6px;
+    margin-top: 13px;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #a04138;
+    border: transparent;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.check-box{
+    margin-top: 10px;
+    margin-left: -4px;
+    align-items: center;
+    font-size: 11px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.details{
+    text-decoration: none;
+    margin-left: 4px;
+    color: #000;
+}
+.details:hover{
+    text-decoration: underline;
+}
+#icon2 
+{
+    font-size: 6px;
+    margin-left: 4px;
+    color: #686565;
+    opacity: 0.8;
+}
+.otherOption {
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.otherOption .line {
+    height: .4px;
+    width: 70px;
+    flex: 1;
+    background-color: #ebe8e8;
+    opacity: 0.13px;
+}
+
+.otherOption p {
+    color: #858383;
+    font-size: 9.5px;
+    padding: 0 4px;
+}
+
+.Amazon-signIn-link{
+    height: 23px;
+    width: 120px;
+    justify-content: center;
+    background-color: #e9f0f2;
+    border-radius: 3px;
+    margin: auto;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0.03px solid #686565;
+    text-decoration: none;
+    color: #000;
+    text-shadow: 0 0 1px;
+    background-image: linear-gradient(rgb(250, 248, 248) 50%, rgb(229, 229, 229) 70%);
+    transition: 0.4s;
+}
+
+.Amazon-signIn-Text {
+    font-size: 9px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+#amazon_logo{
+    font-size: 22px;
+    margin-left: -4px;
+    opacity: 0.8;
+}
+.New_to_6pm{
+    margin: auto;
+    margin-top: -190px;
+    display: flex;
+    align-items: center;
+}
+.New_to_6pm .line {
+    height: .4px;
+    width: 85px;
+    flex: 1;
+    background-color: #ebe8e8;
+    opacity: 0.13px;
+}
+
+.New_to_6pm p {
+    color: #858383;
+    font-size: 9.5px;
+    padding: 0 4px;
+}
+.btn2{
+    width: 235px;
+    margin: auto;
+    margin-left: -2px;
+    padding: 5px;
+    color: #a04138;
+    font-size: 11px;
+    font-weight: bold;
+    background: transparent;
+    border: 1.4px solid #a04138;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+#creatAccountBtn{
+    text-decoration: none;
+    color: #a04138;
+}
+.a_account{
+    text-decoration: none;
+    color: #a04138;
+}
+.footer_line{
+    width: 100%;
+    height: 1.7px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(227, 227, 227) 25%, rgb(227, 227, 227) 75%, rgb(255, 255, 255) 80%);
+    margin-top: 20px;
+    opacity: 0.8;
+}
+.footer{
+width: 100%;
+    background-image: linear-gradient(to right,
+            rgb(255, 255, 255) 0%,
+            rgb(246, 245, 248) 25%,
+            rgb(243, 243, 248) 70%,
+            rgb(255, 255, 255) 100%);
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+.footerItem1{
+    margin-top: 16px;
+}
+.footerItems{
+    font-size: 9px;
+    margin-inline-end: 15px;
+    color: #000;
+}
+.footer_paragraph{
+    font-size: 9px;
+    line-height: 16px;
+    text-align: center;
+}

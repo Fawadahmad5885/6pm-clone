@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Error || Page</title>
+    <link rel="stylesheet" href="error_account.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+          <img
+      class="backGround_img"
+      src="https://m.media-amazon.com/images/G/01/6pm/logos/6pm-Logo-1x._CB485946284_.png"
+    />
+
+        <div class="errorMessage">
+      <div class="problem">
+        <i id="alert_icon" class='bx bx-error'></i>
+        <p class="alert_para">There was a problem</p>
+      </div>
+      <ul>
+        <li><p> Enter your name</p></li>
+        <li> <p> Enter your email</p></li>
+        <li> <p> Enter your password</p></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h1 class="box-heading">
+        Create account
+      </h1>
+      <div class="input_fields">
+        <div class="Input">
+          <label for="text" class="-text">Your Name</label>
+          <input
+            type="text"
+            class="input"
+            name="text"
+            id="text"
+            required
+            placeholder="Enter first and last name"
+          />
+          <span id="Text" style="font-size: 9px"></span>
+        </div>
+        <div class="Input">
+          <label for="email" class="-email">Email</label>
+          <input
+            type="text"
+            class="input"
+            name="email"
+            id="e-mail"
+            required
+          />
+          <span id="Email" style="font-size: 9px"></span>
+        </div>
+        <div class="Input">
+          <label for="password" class="-password">Password</label>
+          <input
+            type="password"
+            class="input"
+            name="password"
+            id="password"
+            required
+            placeholder="At least 6 characters"
+          />
+          <p class="txt_with_password">Passwords must be at least 6 characters.</p>
+        </div>
+        <div class="Input">
+          <label for="password" class="-password">Re-enter password</label>
+          <input
+            type="password"
+            class="input"
+            name="password"
+            id="re-password"
+            required
+          />
+          <span id="rePassword" style="font-size: 9px"></span>
+        </div>
+      </div>
+
+      <button class="creatAccountBtn" id="CreateAccount">
+        create your 12pm account
+      </button>
+
+      <div class="box_para">Don't Have An Email Address or need additional help? Don't Worry! <span style="font-weight: 200;" > Give Us A Call At</span> 1.888.676.2660</div>
+
+      <div class="otherOption">
+        <div class="line"></div>
+        <p>Other register options</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="Amazon-signIn">
+        <a
+          target="_blank"
+          href="https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon
+            .com%2F%3F_encoding%3DUTF8%26adgrpid%3D82342659060%26hvadid%3D673584962059%26hvdev%3Dc%26hvdvcmdl%3D%26hvlocint%3D%26h
+            vlocphy%3D1011082%26hvnetw%3Dg%26hvpone%3D%26hvpos%3D%26hvptwo%3D%26hvqmt%3De%26hvrand%3D14602812572045568590%26hvtargid
+            %3Dkwd-10573980%26hydadcr%3D2246_13649807%26ref%3Dpd_sl_7nnedyywlk_e%26tag%3Dgoogleglobalp-20%26ref_%3Dnav_em_hd_re_signin
+            &openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_
+            setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&ref_%3Dnav_em_hd_clc_signin_0_1_1_39"
+          class="Amazon-signIn-link"
+        >
+          <i class="bx bxl-amazon"></i>
+          <p class="Amazon-signIn-Text">Login with Amazon</p>
+        </a>
+      </div>
+
+      <div class="box_footer">
+        <p>Already have an account?</p>
+        <a href="main.html" class="signIn" target="_blank">Sign in</a>
+        <i class='bx bx-caret-right' id="right_icon"></i>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer_line"></div>
+    <div class="footer">
+      <div class="footerItem1">
+        <a href="" class="footerItems">Terms of use</a>
+        <a href="" class="footerItems">Privacy Policy</a>
+      </div>
+        <p class="footer_paragraph">
+          © 2009-2023 Zappos LLC or its affiliates, 400 East Stewart Avenue. Las
+          Vegas NV 89101<br>6pm.com is operated by Zappos IP LLC. Products on
+          6pm.com are sold by 6pm.com, LLC.<br>e-Gift Cards on 6pm.com are sold by
+          ACI Gift Cards LLC.<br>For premier service, selection, and shipping,
+          visit Zappos.com — your one-stop shop for the latest in Shoes,
+          Sandals, Dresses, Jeans and more!
+        </p>
+    </div>
+
+    <!-- JavaScript -->
+
+  </body>
+</html>
