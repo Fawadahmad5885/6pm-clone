@@ -1,3 +1,4 @@
+
 function showAlert() {
     alert(
         "Keep me signed in reduces the number of times you're asked to Sign-In on this device. To keep your account secure, use this option only on your personal devices."
@@ -33,4 +34,10 @@ document.getElementById("sign-in").addEventListener("click", function () {
     } else {
         password_error.innerHTML = "";
     }
+
+    let EmailjsonVariable = JSON.stringify(email);
+    let PasswordjsonVarible = JSON.stringify(password);
+
+    console.log(EmailjsonVariable);
+    console.log(PasswordjsonVarible);
 });
