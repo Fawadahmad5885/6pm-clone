@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login|Page</title>
+
+    <!--====  Css  ===-->
     <link rel="stylesheet" href="Login.css" />
+
+    <!--==== JavaScript  ===-->
+    <link rel="stylesheet" href="JavaScript/login.js">
+
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
@@ -22,6 +28,11 @@
     <div class="box">
       <div class="box_contents">
         <h2>Sign-In</h2>
+
+          <!--=======   Login Form   =========  -->
+
+        <form   action="#" class="login__form">
+
         <div class="input_fields">
           <div class="Input">
             <label for="email" class="-email">Email</label>
@@ -47,7 +58,12 @@
             <span id="Password" style="font-size: 9px"></span>
           </div>
         </div>
-        <button class="btn" id="sign-in">Sign in</button>
+        <button type="submit" class="btn" id="sign-in">Sign in</button>
+        </form>
+
+        <!--=========   Login Form end =========-->
+
+
         <div class="check-box">
           <input type="checkbox" id="check" name="check" style="width: 10px" />
           <label for="check">Keep me signed in.</label>
@@ -107,45 +123,5 @@
           Sandals, Dresses, Jeans and more!
         </p>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-            function showAlert() {
-        alert(
-          "Keep me signed in reduces the number of times you're asked to Sign-In on this device. To keep your account secure, use this option only on your personal devices."
-        );
-      }
-
-      document.getElementById("sign-in").addEventListener("click", function () {
-        let email = document.getElementById("e-mail").value; // Get the value of the email input
-        let password = document.getElementById("password").value; // Get the value of the password input
-
-        let regex_for_email = /\S+@\S+\.\S+/;
-        let regex_for_password = /\d+/;
-
-        let Email_Error = document.getElementById("Email");
-        let password_error = document.getElementById("Password");
-        let box = document.querySelector(".box");
-
-        if (email === "" || !regex_for_email.test(email)) {
-          Email_Error.innerHTML = "Enter your email or mobile phone number";
-          Email_Error.style.color = "#c71f0a";
-          Email_Error.style.fontWeight = "300";
-          Email_Error.style.marginTop = "3px";
-          box.style.height = "390px";
-        } else {
-          Email_Error.innerHTML = "";
-        }
-        if (password === "" || !regex_for_password.test(password)) {
-          password_error.innerHTML = "Enter your password";
-          password_error.style.color = "#c71f0a";
-          password_error.style.fontWeight = "300";
-          password_error.style.marginTop = "3px";
-          box.style.height = "390px";
-        } else {
-          password_error.innerHTML = "";
-        }
-      });
-    </script>
   </body>
 </html>
