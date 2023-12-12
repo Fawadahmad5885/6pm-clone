@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="Login.css" />
 
     <!--==== JavaScript  ===-->
-    <link rel="stylesheet" href="JavaScript/login.js">
+    <link rel="stylesheet" href="JavaScript/login.js" />
+    <script src="./JavaScript/login.js"></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
@@ -29,40 +30,40 @@
       <div class="box_contents">
         <h2>Sign-In</h2>
 
-          <!--=======   Login Form   =========  -->
+        <!--=======   Login Form   =========  -->
 
-        <form   action="#" class="login__form">
-
-        <div class="input_fields">
-          <div class="Input">
-            <label for="email" class="-email">Email</label>
-            <input
-              type="text"
-              class="input"
-              name="email"
-              id="e-mail"
-              required
-            />
-            <span id="Email" style="font-size: 9px"></span>
+        <form action="#" class="login__form">
+          <div class="input_fields">
+            <div class="Input">
+              <label for="email" class="-email">Email</label>
+              <input
+                type="text"
+                class="input"
+                name="email"
+                id="e-mail"
+                required
+              />
+              <span id="Email" style="font-size: 9px"></span>
+            </div>
+            <div class="Input">
+              <label for="password" class="-password">Password:</label>
+              <a href="password.html" target="_blank" class="password_forgot"
+                >Forgot your password?</a
+              >
+              <input
+                type="password"
+                class="input"
+                name="password"
+                id="password"
+                required
+              />
+              <span id="Password" style="font-size: 9px"></span>
+            </div>
           </div>
-          <div class="Input">
-            <label for="password" class="-password">Password:</label>
-            <a href="password.html" target="_blank" class="password_forgot">Forgot your password?</a>
-            <input
-              type="password"
-              class="input"
-              name="password"
-              id="password"
-              required
-            />
-            <span id="Password" style="font-size: 9px"></span>
-          </div>
-        </div>
-        <button type="submit" class="btn" id="sign-in">Sign in</button>
+          <button type="submit" class="btn" id="sign-in">Sign in</button>
         </form>
 
         <!--=========   Login Form end =========-->
-
 
         <div class="check-box">
           <input type="checkbox" id="check" name="check" style="width: 10px" />
@@ -99,9 +100,10 @@
           <p>New to 6pm?</p>
           <div class="line"></div>
         </div>
-        <button class="btn2" id="create_account_btn" >
-          <a href="account.html" target="_blank" id="creatAccountBtn" >
-          Create your 6pm account</a>
+        <button class="btn2" id="create_account_btn">
+          <a href="account.html" target="_blank" id="creatAccountBtn">
+            Create your 6pm account</a
+          >
         </button>
       </div>
     </div>
@@ -114,14 +116,15 @@
         <a href="" class="footerItems">Terms of use</a>
         <a href="" class="footerItems">Privacy Policy</a>
       </div>
-        <p class="footer_paragraph">
-          © 2009-2023 Zappos LLC or its affiliates, 400 East Stewart Avenue. Las
-          Vegas NV 89101<br>6pm.com is operated by Zappos IP LLC. Products on
-          6pm.com are sold by 6pm.com, LLC.<br>e-Gift Cards on 6pm.com are sold by
-          ACI Gift Cards LLC.<br>For premier service, selection, and shipping,
-          visit Zappos.com — your one-stop shop for the latest in Shoes,
-          Sandals, Dresses, Jeans and more!
-        </p>
+      <p class="footer_paragraph">
+        © 2009-2023 Zappos LLC or its affiliates, 400 East Stewart Avenue. Las
+        Vegas NV 89101<br />6pm.com is operated by Zappos IP LLC. Products on
+        6pm.com are sold by 6pm.com, LLC.<br />e-Gift Cards on 6pm.com are sold
+        by ACI Gift Cards LLC.<br />For premier service, selection, and
+        shipping, visit Zappos.com — your one-stop shop for the latest in Shoes,
+        Sandals, Dresses, Jeans and more!
+      </p>
     </div>
   </body>
+  <script src="./JavaScript/login.js"></script>
 </html>
