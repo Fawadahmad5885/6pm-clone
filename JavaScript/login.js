@@ -6,8 +6,8 @@ function showAlert() {
 }
 
 document.getElementById("sign-in").addEventListener("click", function () {
-    let email = document.getElementById("e-mail").value; // Get the value of the email input
-    let password = document.getElementById("password").value; // Get the value of the password input
+    let email = document.getElementById("e-mail").value;
+    let password = document.getElementById("password").value;
 
     let regex_for_email = /\S+@\S+\.\S+/;
     let regex_for_password = /\d+/;
@@ -35,9 +35,20 @@ document.getElementById("sign-in").addEventListener("click", function () {
         password_error.innerHTML = "";
     }
 
-    let EmailjsonVariable = JSON.stringify(email);
-    let PasswordjsonVarible = JSON.stringify(password);
+    if (regex_for_email.test(email) && regex_for_password.test(password)) {
 
-    console.log(EmailjsonVariable);
-    console.log(PasswordjsonVarible);
+        handleClick(email, password);
+    } else {
+        console.log("Email or password validation failed.");
+    }
 });
+
+function handleClick(emailValue, passwordValue) {
+    let User_data = {
+        email: emailValue,
+        password: passwordValue
+    };
+
+    let jsonObj = JSON.stringify(User_data);
+    console.log(jsonObj);
+}

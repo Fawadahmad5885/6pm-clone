@@ -31,36 +31,38 @@
 
         <!--=======   Login Form   =========  -->
 
-        <form action="#" class="login__form">
-          <div class="input_fields">
-            <div class="Input">
-              <label for="email" class="-email">Email</label>
-              <input
-                type="text"
-                class="input"
-                name="email"
-                id="e-mail"
-                required
-              />
-              <span id="Email" style="font-size: 9px"></span>
-            </div>
-            <div class="Input">
-              <label for="password" class="-password">Password:</label>
-              <a href="password.html" target="_blank" class="password_forgot"
-                >Forgot your password?</a
-              >
-              <input
-                type="password"
-                class="input"
-                name="password"
-                id="password"
-                required
-              />
-              <span id="Password" style="font-size: 9px"></span>
-            </div>
+        <!-- <form action="#" class="login__form"> -->
+        <div class="input_fields">
+          <div class="Input">
+            <label for="email" class="-email">Email</label>
+            <input
+              type="text"
+              class="input"
+              name="email"
+              id="e-mail"
+              required
+            />
+            <span id="Email" style="font-size: 9px"></span>
           </div>
-          <button type="submit" class="btn" id="sign-in">Sign in</button>
-        </form>
+          <div class="Input">
+            <label for="password" class="-password">Password:</label>
+            <a href="password.html" target="_blank" class="password_forgot"
+              >Forgot your password?</a
+            >
+            <input
+              type="password"
+              class="input"
+              name="password"
+              id="password"
+              required
+            />
+            <span id="Password" style="font-size: 9px"></span>
+          </div>
+        </div>
+        <button onclick="handleclick()" class="btn" id="sign-in">
+          Sign in
+        </button>
+        <!-- </form> -->
 
         <!--=========   Login Form end =========-->
 
@@ -124,6 +126,6 @@
         Sandals, Dresses, Jeans and more!
       </p>
     </div>
+    <script src="./JavaScript/login.js"></script>
   </body>
-  <script src="./JavaScript/login.js"></script>
 </html>
