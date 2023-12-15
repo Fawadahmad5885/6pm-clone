@@ -13,14 +13,29 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="./JavaScript/account.js"></script>
   </head>
   <body>
     <img
       class="backGround_img"
       src="https://m.media-amazon.com/images/G/01/6pm/logos/6pm-Logo-1x._CB485946284_.png"
     />
+    <div class="errorMessage">
+      <div class="problem">
+        <i id="alert_icon" class="bx bx-error"></i>
+        <p class="alert_para">There was a problem</p>
+      </div>
+      <ul>
+        <li><p>Enter your name</p></li>
+        <li><p>Enter your email</p></li>
+        <li><p>Enter your password</p></li>
+      </ul>
+    </div>
+
+    <!--=== Box===-->
+
     <div class="box">
-      <h1 class="box-heading"> Create account </h1>
+      <h1 class="box-heading">Create account</h1>
       <div class="input_fields">
         <div class="Input">
           <label for="text" class="-text">Your Name</label>
@@ -59,7 +74,7 @@
             type="password"
             class="input"
             name="password"
-            id="re-password"
+            id="Re-password"
             required
           />
           <span id="rePassword" style="font-size: 9px"></span>
@@ -120,27 +135,6 @@
       </p>
     </div>
 
-    <!-- JavaScript -->
-
-    <script>
-      document.getElementById("CreateAccount").addEventListener("click", function () {
-
-          let name = document.getElementById("text").value;
-          let email = document.getElementById("e-mail").value;
-          let password = document.getElementById("password").value;
-
-          let regex_for_name = /^[a-zA-Z]+ [a-zA-Z]+$/;
-          let regex_for_email = /\S+@\S+\.\S+/;
-          let regex_for_password = /[0-9a-zA-Z]{6,}/;
-
-          if (email === "" || !regex_for_email.test(email)) {
-            window.location.href = "error_account.html";
-          } else if (name === "" || !regex_for_name.test(name)) {
-            window.location.href = "error_account.html";
-          } else if (password === "" || !regex_for_password.test(password)) {
-            window.location.href = "error_account.html";
-          }
-        });
-    </script>
+    <script src="./JavaScript/account.js"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@ function showAlert() {
     );
 }
 
-document.getElementById("sign-in").addEventListener("click", function () {
+document.getElementById("sign-in")?.addEventListener("click", function () {
     let email = document.getElementById("e-mail").value;
     let password = document.getElementById("password").value;
 

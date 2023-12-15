@@ -204,3 +204,61 @@ input {
     line-height: 16px;
     text-align: center;
 }
+.errorBox iframe {
+    display: flex;
+    margin: auto;
+    border: none;
+    /* This will remove the border */
+}
+.errorMessage {
+    padding: 14.5px 20.5px;
+    width: 240px;
+    display: none;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 15px;
+    background: transparent;
+    border: 0.5px solid #a04138;
+    border-radius: 4px;
+}
+
+.problem {
+    display: flex;
+    flex-direction: row;
+}
+
+#alert_icon {
+    font-size: 32px;
+    font-weight: 10;
+    color: #c54337;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.alert_para {
+    color: #c54337;
+    margin-top: -2px;
+    font-size: 13.5px;
+    margin-left: 10px;
+}
+
+ul {
+    margin-left: 2px;
+    margin-top: -12px;
+}
+
+li {
+    margin-top: -7px;
+    font-size: 10px;
+    line-height: 13px;
+}
+
+li p {
+    margin-left: 5px;
+}
+
+.last_line {
+    font-size: 10px;
+    margin-left: -9px;
+    margin-top: -6px;
+}
