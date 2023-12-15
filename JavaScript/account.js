@@ -37,10 +37,10 @@ document
             listItems.forEach(item => {
                 const itemText = item.textContent.trim();
                 if (itemText === "Enter your email") {
+                    item.style.marginTop = "12px";
                     if (email === "") {
                         item.style.display = "list-item";
                     } else {
-
                         item.textContent = "Enter a valid email address";
                         item.style.display = "list-item";
                     }
