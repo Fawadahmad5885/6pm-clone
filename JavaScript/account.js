@@ -88,31 +88,6 @@ document
             });
         }
 
-        // ===================== If Name and email are empty OR not correct =================== // Not working
-
-        // else if (name === "" && email === "") {
-        //     let errorBox = document.getElementsByClassName("errorMessage")[0];
-        //     errorBox.style.display = "block";
-        //     let listItems = errorBox.querySelectorAll("ul li");
-
-        //     listItems.forEach(item => {
-        //         const itemText = item.textContent.trim();
-        //         if (itemText == "Enter your name") {
-        //             item.style.display = "list-item";
-        //         }
-        //         else if (itemText == "Enter your email") {
-        //             if (email === "") {
-        //                 item.style.display = "list-item";
-        //             } else {
-        //                 item.textContent = "Enter a valid email";
-        //                 item.style.display = "list-item";
-        //             }
-        //         }
-        //         else {
-        //             item.style.display = "none";
-        //         }
-        //     });
-        // }
 
         // =================== If only Name  is empty or not equal to regex  ================ //
 
