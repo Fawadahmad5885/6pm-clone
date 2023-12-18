@@ -1,5 +1,6 @@
 document
     .getElementById("CreateAccount")?.addEventListener("click", function () {
+
         let name = document.getElementById("text").value;
         let email = document.getElementById("e-mail").value;
         let password = document.getElementById("password").value;
@@ -11,6 +12,7 @@ document
 
 
         // =================== If Name, Email and Password all are  empty  ================ //
+
         if (
             (email === "" || !regex_for_email.test(email)) &&
             (name === "" || !regex_for_name.test(name)) &&
@@ -61,7 +63,7 @@ document
 
         // ===================== If Name and password are empty OR not correct =================== //
 
-        else if (name === "" && password === "") {
+        else if (name === "" && (password === "" || password !== re_password.value)) {
             let errorBox = document.getElementsByClassName("errorMessage")[0];
             errorBox.style.display = "block";
 
@@ -86,27 +88,31 @@ document
             });
         }
 
-        // ===================== If Name and email are empty OR not correct =================== //
+        // ===================== If Name and email are empty OR not correct =================== // Not working
 
-        else if (name === "" && (email === "" || !regex_for_email.test(email))) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
+        // else if (name === "" && email === "") {
+        //     let errorBox = document.getElementsByClassName("errorMessage")[0];
+        //     errorBox.style.display = "block";
+        //     let listItems = errorBox.querySelectorAll("ul li");
 
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                const itemText = item.textContent.trim();
-                if (itemText == "Enter your name") {
-                    item.style.display = "list-item";
-                }
-                else if (itemText == "Enter your email") {
-                    item.style.display = "list-item";
-                }
-                else {
-                    item.style.display = "none";
-                }
-            });
-        }
+        //     listItems.forEach(item => {
+        //         const itemText = item.textContent.trim();
+        //         if (itemText == "Enter your name") {
+        //             item.style.display = "list-item";
+        //         }
+        //         else if (itemText == "Enter your email") {
+        //             if (email === "") {
+        //                 item.style.display = "list-item";
+        //             } else {
+        //                 item.textContent = "Enter a valid email";
+        //                 item.style.display = "list-item";
+        //             }
+        //         }
+        //         else {
+        //             item.style.display = "none";
+        //         }
+        //     });
+        // }
 
         // =================== If only Name  is empty or not equal to regex  ================ //
 
@@ -158,6 +164,7 @@ document
                     if (password === "") {
                         item.style.display = "list-item";
                     } else {
+                        item.style.marginTop = "10px";
                         item.textContent = "Passwords must match";
                         item.style.display = "list-item";
                     }

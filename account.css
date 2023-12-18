@@ -204,12 +204,6 @@ input {
     line-height: 16px;
     text-align: center;
 }
-.errorBox iframe {
-    display: flex;
-    margin: auto;
-    border: none;
-    /* This will remove the border */
-}
 .errorMessage {
     padding: 14.5px 20.5px;
     width: 240px;
@@ -255,10 +249,4 @@ li {
 
 li p {
     margin-left: 5px;
-}
-
-.last_line {
-    font-size: 10px;
-    margin-left: -9px;
-    margin-top: -6px;
 }
