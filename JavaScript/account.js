@@ -1,151 +1,48 @@
-document
-    .getElementById("CreateAccount")?.addEventListener("click", function () {
+document.getElementById("CreateAccount")?.addEventListener("click", function () {
+    let name = document.getElementById("text").value;
+    let email = document.getElementById("e-mail").value;
+    let password = document.getElementById("password").value;
+    let re_password = document.getElementById("Re-password").value;
 
-        let name = document.getElementById("text").value;
-        let email = document.getElementById("e-mail").value;
-        let password = document.getElementById("password").value;
-        let re_password = document.getElementById("Re-password").value;
+    let regex_for_name = /^[a-zA-Z]+\s[a-zA-Z]+$/;
+    let regex_for_email = /\S+@\S+\.\S+/;
+    let regex_for_password = /[0-9a-zA-Z]{6,}/;
 
-        let regex_for_name = /^[a-zA-Z]+ [a-zA-Z]+$/;
-        let regex_for_email = /\S+@\S+\.\S+/;
-        let regex_for_password = /[0-9a-zA-Z]{6,}/;
+    let errorBox = document.querySelector(".errorMessage");
+    errorBox.style.display = "block";
 
+    let enterName = document.getElementById("enter_name");
+    let enterEmail = document.getElementById("enter_email");
+    let enterPassword = document.getElementById("enter_password");
 
-        // =================== If Name, Email and Password all are  empty  ================ //
+    if (name === "" || !regex_for_name.test(name)) {
+        enterName.style.display = "list-item";
+    } else {
+        enterName.style.display = "none";
+    }
 
-        if (
-            (email === "" || !regex_for_email.test(email)) &&
-            (name === "" || !regex_for_name.test(name)) &&
-            (password === "" || password !== re_password.value)
-        ) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                item.style.display = "list-item";
-            });
+    if (email === "" || !regex_for_email.test(email)) {
+        enterEmail.style.display = "list-item";
+        if (email !== "" && !regex_for_email.test(email)) {
+            enterEmail.textContent = "Enter a valid email address";
+            enterEmail.style.paddingLeft = "4px"
         }
+    } else {
+        enterEmail.style.display = "none";
+    }
 
-        // // =================== If Email and password  are empty OR not correct ================ //
-
-        else if ((email === "" || !regex_for_email.test(email)) && (password === "" || password !== re_password.value)) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                const itemText = item.textContent.trim();
-                if (itemText === "Enter your email") {
-                    item.style.marginTop = "12px";
-                    if (email === "") {
-                        item.style.display = "list-item";
-                    } else {
-                        item.textContent = "Enter a valid email address";
-                        item.style.display = "list-item";
-                    }
-                } else if (itemText === "Enter your password") {
-                    if (password === "") {
-                        item.style.margin-top == "20px";
-                        item.style.display = "list-item";
-                    } else {
-                        item.textContent = "Passwords must match";
-                        item.style.display = "list-item";
-                    }
-                } else {
-                    item.style.display = "none";
-                }
-            });
+    if (password === "" || password !== re_password) {
+        enterPassword.style.display = "list-item";
+        if (password !== re_password) {
+            enterPassword.style.paddingLeft = "4px";
+            enterPassword.style.marginTop = "4px";
+            enterPassword.textContent = "Passwords must match";
         }
+    } else {
+        enterPassword.style.display = "none";
+    }
 
-
-        // ===================== If Name and password are empty OR not correct =================== //
-
-        else if (name === "" && (password === "" || password !== re_password.value)) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                const itemText = item.textContent.trim();
-                if (itemText == "Enter your name") {
-                    item.style.display = "list-item";
-                }
-                else if (itemText == "Enter your password") {
-                    if (password === "") {
-                        item.style.display = "list-item";
-                    } else {
-                        item.textContent = "Passwords must match";
-                        item.style.display = "list-item";
-                    }
-                }
-                else {
-                    item.style.display = "none";
-                }
-            });
-        }
-
-
-        // =================== If only Name  is empty or not equal to regex  ================ //
-
-        else if (name === "" || !regex_for_name.test(name)) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                if (item.textContent.trim() !== "Enter your name") {
-                    item.style.display = "none";
-                }
-            });
-        }
-
-        // =================== If only Email  is empty or not equal to regex  ================ //
-
-        else if (email === "" || !regex_for_email.test(email)) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                if (item.textContent.trim() === "Enter your email") {
-                    if (email === "") {
-                        item.style.display = "list-item";
-                    } else {
-                        item.textContent = "Enter a valid email address";
-                        item.style.display = "list-item";
-                    }
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
-
-        // =================== If only Password  is empty or not equal to re-entered password  ================ //
-
-        else if (password === "" || password !== re_password) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-
-            listItems.forEach(item => {
-                if (item.textContent.trim() === "Enter your password") {
-                    if (password === "") {
-                        item.style.display = "list-item";
-                    } else {
-                        item.style.marginTop = "10px";
-                        item.textContent = "Passwords must match";
-                        item.style.display = "list-item";
-                    }
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
-    });
+    if (name !== "" && regex_for_name.test(name) && email !== "" && regex_for_email.test(email) && password !== "" && password === re_password) {
+        errorBox.style.display = "none";
+    }
+});
