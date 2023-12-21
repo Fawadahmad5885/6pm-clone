@@ -16,45 +16,36 @@ function changeText() {
 }
 
 // Continue..........
-document
-    .getElementById("continue_page")
-    .addEventListener("click", function () {
-        let email = document.getElementById("e-mail").value;
-        let characters = document.getElementById("char").value;
+document.getElementById("continue_page").addEventListener("click", function () {
+    let email = document.getElementById("e-mail").value;
+    let characters = document.getElementById("char").value;
+    let random_char = document.getElementById("submit").value;
 
-        let regex_for_email = /\S+@\S+\.\S+/;
-        let random_char = document.getElementById("submit").value;
+    let regex_for_email = /\S+@\S+\.\S+/;
 
-        // If Both email and characters are empty or not corect
+    let errorBox = document.querySelector(".errorMessage");
+    errorBox.style.display = "block";
 
-        if ((email === "" || !regex_for_email.test(email)) && characters !== random_char.value) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
+    let enterEmail = document.getElementById("enter_email");
+    let enterCharacters = document.getElementById("enter_characters");
 
-            let listItems = errorBox.querySelectorAll("ul li");
+    if (email === "" || !regex_for_email.test(email)) {
+        enterEmail.style.display = "list-item";
+        enterEmail.style.marginTop = "5px"
+        enterEmail.textContent = email === "" ? "Enter an email address" : "Enter a valid email address";
+    } else {
+        enterEmail.style.display = "none";
+    }
 
-            listItems.forEach((item) => {
-                item.style.display = "list-item";
-            });
-        }
+    if (characters === "" || characters !== random_char) {
+        enterCharacters.style.display = "list-item";
+        enterCharacters.style.marginTop = "3px"
+        enterCharacters.textContent = characters === "" ? "Enter characters" : "Characters must match";
+    } else {
+        enterCharacters.style.display = "none";
+    }
 
-        else if (characters === "" || (characters !== random_char.value)) {
-            let errorBox = document.getElementsByClassName("errorMessage")[0];
-            errorBox.style.display = "block";
-
-            let listItems = errorBox.querySelectorAll("ul li");
-            listItems.forEach(item => {
-                if (item.textContent.trim() === "Enter your characters as they are given in the challenge.") {
-                    if (characters === "") {
-                        item.style.display = "list-item";
-                    } else {
-                        item.style.marginTop = "10px";
-                        item.textContent = "Characters must match";
-                        item.style.display = "list-item";
-                    }
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
-    });
+    if (email !== "" && regex_for_email.test(email) && characters !== "" && characters === random_char) {
+        errorBox.style.display = "none";
+    }
+});
